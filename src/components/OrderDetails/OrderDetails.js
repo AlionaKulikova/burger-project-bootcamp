@@ -6,9 +6,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { sendData } from "../../services/actions/OrderDetails";
 
 const OrderDetails = ({ modalOrderRef }) => {
+
   const { dataConstructor } = useSelector((state) => ({
     dataConstructor: state.dataConstructor,
   }));
+
   const idConstructorForPost = dataConstructor.map((item) => item.arr._id);
   const dispatch = useDispatch();
 
@@ -22,7 +24,7 @@ const OrderDetails = ({ modalOrderRef }) => {
   }));
 
 if (postRequest) {
-  return <p>Загрузка...</p>
+  return <p> Загрузка... </p>
 }
 
   return (
